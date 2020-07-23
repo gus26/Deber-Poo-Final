@@ -7,6 +7,7 @@ package cursosonline.Dao;
 
 import cursosonline.entidades.CursosEstudiantes;
 import java.util.List;
+import cursosonline.entidades.Estudiantes;
 
 /**
  *

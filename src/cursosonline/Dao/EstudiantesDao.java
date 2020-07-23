@@ -5,6 +5,7 @@
  */
 package cursosonline.Dao;
 
+import cursosonline.entidades.Curso;
 import cursosonline.entidades.Estudiantes;
 import java.util.List;
 
@@ -19,4 +20,7 @@ public interface EstudiantesDao {
     public void actualizarE(Estudiantes estudiantes);
 
     public void eliminarE(int id);
+    
+    List<Curso> getCursosPorEstudiante(int estudianteId);
+    List<Estudiantes> getEstudiante();
 }

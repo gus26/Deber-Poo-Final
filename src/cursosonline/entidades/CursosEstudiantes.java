@@ -5,10 +5,7 @@
  */
 package cursosonline.entidades;
 
-/**
- *
- * @author SafeComputer
- */
+
 public class CursosEstudiantes {
     int id;
     int cursoId;
@@ -19,6 +16,8 @@ public class CursosEstudiantes {
         this.cursoId = cursoId;
         this.estudianteid = estudianteid;
     }
+    
+    
 
     public CursosEstudiantes() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -47,6 +46,42 @@ public class CursosEstudiantes {
     public void setEstudianteid(int estudianteid) {
         this.estudianteid = estudianteid;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final CursosEstudiantes other = (CursosEstudiantes) obj;
+        if (this.id != other.id) {
+            return false;
+        }
+        if (this.cursoId != other.cursoId) {
+            return false;
+        }
+        if (this.estudianteid != other.estudianteid) {
+            return false;
+        }
+        return true;
+    }
     
+    public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + cursoId;
+		result = prime * result + estudianteid;
+		result = prime * result + id;
+		return result;
+	}
     
+    @Override
+    public String toString() {
+		return "cursos_estudiantes [id=" + id + ", cursos_id=" + cursoId + ", esudiantes_id=" + estudianteid + "]";
+	}
 }

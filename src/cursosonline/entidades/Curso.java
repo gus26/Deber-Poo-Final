@@ -5,6 +5,9 @@
  */
 package cursosonline.entidades;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author SafeComputer
@@ -13,6 +16,17 @@ public class Curso {
     
      int id;
     String nombre;
+    List<Estudiantes> estudiante = new ArrayList<>();
+
+    public List<Estudiantes> getEstudiante() {
+        return estudiante;
+    }
+
+    public void setEstudiante(List<Estudiantes> estudiante) {
+        this.estudiante = estudiante;
+    }
+    
+    
 
     public Curso() {
     }
@@ -38,7 +52,12 @@ public class Curso {
         this.nombre = nombre;
     }
     
+     @Override
+     public String toString() {
+        return "Curso{" + "id=" + id + ", nombre=" + nombre + '}';
     
+    
+}
 }
 
     
